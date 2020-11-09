@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+        <h1>Text to Speech Converter</h1>
+
+        <textarea id="txt" cols="10" rows="10"></textarea>
+        <input onclick="speakText()" type="button" value="submit">
+
+        <script>
+            function speakText(){
+                var text = document.getElementById('txt').value;
+                responsiveVoice.speak(text);
+                
+            }
+        </script>
+
+
+<div class="container">
+
+    
+    
+
+    <div class="app"> 
+        <h3>Add New Note</h3>
+        <div class="input-single">
+            <textarea id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="6"></textarea>
+        </div>         
+        <button id="start-record-btn" title="Start Recording">Start Recognition</button>
+        <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
+        <button id="save-note-btn" title="Save Note">Save Note</button>   
+        <p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access.</p>
+        
+        <h3>My Notes</h3>
+        <ul id="notes">
+            <li>
+                <p class="no-notes">You don't have any notes.</p>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
+
+    </body>
+</html>
